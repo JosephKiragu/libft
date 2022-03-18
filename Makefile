@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/03/18 16:51:36 by jkiragu           #+#    #+#              #
+#    Updated: 2022/03/18 17:14:46 by jkiragu          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME		= libft.a
 CFLAGS		= -Wall -Werror -Wextra -I.
 SRCS		=	ft_bzero.c ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
@@ -12,11 +24,11 @@ all: 		$(NAME)
 
 	
 
-# This won't run if the .o files don't exist or are not modified
+
 $(NAME): 	$(OBJ)
 			ar rcs $(NAME) $(OBJ)
 
-# This won't run if the source files don't exist or are not modified
+
 $(OBJ):		$(SRCS) 
 			gcc $(CFLAGS) $(SRCS)
 
@@ -28,6 +40,6 @@ fclean:		clean
 
 re: 		fclean all
 
-# I use .PHONY to make sure that gnu make will still run even if files called
-# clean / fclean / all and re already exist in the directory
+
+
 .PHONY:		clean fclean all 
