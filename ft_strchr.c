@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-char    *ft_strchr(char *str, int c)
+
+
+char    *ft_strchr(const char *str, int c)
 {
   int j;
     
@@ -29,7 +31,7 @@ char    *ft_strchr(char *str, int c)
         return ((char *)str + j);
     }
     
-    *str = '\0';
+    //*str = '\0';
     
-    return(str);
+    return(NULL);
 }
