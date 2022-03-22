@@ -31,7 +31,5 @@ char    *ft_strchr(const char *str, int c)
         return ((char *)str + j);
     }
     
-    //*str = '\0';
-    
     return(NULL);
 }
