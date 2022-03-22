@@ -30,6 +30,10 @@ int     ft_strncmp(const char *s1, const char *s2, size_t n)
     
             return (*((unsigned char *)s1 + j) - *((unsigned char *)s2 +j));
         }
+        if(sPtr1[j] == '\0' && sPtr2[j] == '\0')
+        {
+            return 0;
+        }
         ++j;
     }
     
