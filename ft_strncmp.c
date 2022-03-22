@@ -23,12 +23,12 @@ int     ft_strncmp(const char *s1, const char *s2, size_t n)
 
     j = 0;
 
-    while(sPtr1[j] && sPtr1[j] && n > 0 && j < n)
+    while( j < n)
     {
         if(sPtr1[j] != sPtr2[j])
         {
-            // return sPtr1[j] - sPtr2[j];
-            return (*((unsigned char *)s1 + j)    - *((unsigned char *)s2 +j));
+    
+            return (*((unsigned char *)s1 + j) - *((unsigned char *)s2 +j));
         }
         ++j;
     }
