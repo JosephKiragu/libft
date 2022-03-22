@@ -6,7 +6,7 @@
 /*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:21:29 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/03/18 16:22:01 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/03/22 22:17:32 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void    *ft_memset(void *s1, int c, size_t len)
 
     if (len == 0)
         return (s1);
-    else if (c == '\0')
+   /* else if (c == '\0')
     {
         *sPtr = '\0'; //Use the char pointer to assign
         return s1;
-    } 
+    }*/ 
     else if (len > j)
     {
         return (0);
@@ -37,7 +37,7 @@ void    *ft_memset(void *s1, int c, size_t len)
     else 
     {
         j = 0;
-        while (sPtr[j] && j < len && c > 0)
+        while (sPtr[j] && j < len)
         {
             sPtr[j] = c;
             ++j;
