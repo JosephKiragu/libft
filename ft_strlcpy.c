@@ -14,9 +14,6 @@
 
 size_t  ft_strlcpy(char *dst, const char *src, size_t cpy_len)
 {
-
-    printf("String src = %s\n",  src);
-    printf("String dst before = %s\n", dst);
     
     size_t srclen;
     srclen = 0;
@@ -40,8 +37,6 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t cpy_len)
         ft_memcpy(dst, src, cpy_len - 1); // minus one to not include the exact string
         //dst[cpy_len - 1] = '\0';
     }
-
-    printf("String dst after = %s\n", dst);
 
     return srclen;
     
