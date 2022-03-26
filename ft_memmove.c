@@ -21,17 +21,17 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     dstPtr = (char *)dst;
     srcPtr = (const char *)src;
 
-    if (!dst)
-    { 
-        return(0);
+    if (!dst || !src)
+    {
+        return NULL;
     }
 
-    if (!src || dst == src || len == 0)
+    if (dst == src || len == 0)
     {
         return dst;
     }
 
-    if (dstPtr > srcPtr) //does not overwrite
+    if (dstPtr > srcPtr) 
     {
         while (len--)// decrease after so that i can use the first value
         {
@@ -41,7 +41,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     }
     else 
     {
-        while(len--) //overwrites
+        while(len--)
         {
             *dstPtr++ = *srcPtr++; //using pointers to not use int J remember to remove it in final code
         }
