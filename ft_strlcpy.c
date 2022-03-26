@@ -12,29 +12,38 @@
 
 #include "libft.h"
 
-size_t  ft_strlcpy(char *dst, char *src, size_t cpy_len)
+size_t  ft_strlcpy(char *dst, const char *src, size_t cpy_len)
 {
-    size_t j;
 
-    j = 0;
+    printf("String src = %s\n",  src);
+    printf("String dst before = %s\n", dst);
+    
+    size_t srclen;
+    srclen = 0;
+    
 
-    if (cpy_len > 0)
+
+    while (*(src + srclen))
     {
-        while (src && j <= (cpy_len - 1))
-        {
-            dst[j] = src[j];
-            j++;     
-        }
-        dst[j] = '\0' ;
+        srclen++;
+        
+
     }
 
-    j = 0 ;
-
-    while(src[j] != '\0')
+    if (srclen + 1 <cpy_len) // +1 to include the terminating value
     {
-        j++ ;
+        ft_memcpy(dst, src, srclen + 1);
+
+    }
+    else if (cpy_len != 0)
+    {
+        ft_memcpy(dst, src, cpy_len - 1); // minus one to not include the exact string
+        //dst[cpy_len - 1] = '\0';
     }
 
-    return (j);
+    printf("String dst after = %s\n", dst);
+
+    return srclen;
+    
 
 }

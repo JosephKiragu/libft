@@ -30,7 +30,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 
     if (dstPtr > srcPtr) 
     {
-        while (len--)// decrease after so that i can use the first value
+        while (len--)// begin copying from backwards from src
         {
             *(dstPtr + len) = *(srcPtr + len); //using * because of pointer arithmetic
         }
@@ -38,7 +38,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     }
     else 
     {
-        while(len--)
+        while(len--)//copy from beginning of src
         {
             *dstPtr++ = *srcPtr++; //using pointers to not use int J remember to remove it in final code
         }
