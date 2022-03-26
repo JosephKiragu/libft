@@ -35,7 +35,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t cpy_len)
     else if (cpy_len != 0)
     {
         ft_memcpy(dst, src, cpy_len - 1); // minus one to not include the exact string
-        //dst[cpy_len - 1] = '\0';
+        dst[cpy_len - 1] = '\0';
     }
 
     return srclen;
