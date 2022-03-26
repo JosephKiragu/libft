@@ -21,10 +21,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     dstPtr = (char *)dst;
     srcPtr = (const char *)src;
 
-    if (!dst || !src)
-    {
-        return NULL;
-    }
+    
 
     if (dst == src || len == 0)
     {
@@ -46,6 +43,11 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
             *dstPtr++ = *srcPtr++; //using pointers to not use int J remember to remove it in final code
         }
         return dst;
+    }
+
+    if (!dst || !src)
+    {
+        return NULL;
     }
 
 }
