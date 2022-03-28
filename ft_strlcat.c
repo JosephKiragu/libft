@@ -21,8 +21,6 @@ size_t  ft_strlcat(char *dest, char *src, size_t cat_len)
 
     j = 0;
     i = 0;
-    printf("String src = %s\n",  src);
-    printf("String dst before = %s\n", dest);
 
     while (dest[j] != '\0')
     {
@@ -51,7 +49,6 @@ size_t  ft_strlcat(char *dest, char *src, size_t cat_len)
         }
         dest[j] = '\0';
     }
-    printf("String dst after = %s\n", dest);
     return (dest_len + src_len);
 }
 // I NEED TO ADD STRLEN FUNCTION TO REDUCE SIZE AND TEST THIS FUNCTION
