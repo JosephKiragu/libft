@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t  ft_strlcat(char *dest, char *src, size_t cat_len)
 {
     size_t j;
@@ -52,7 +53,6 @@ size_t  ft_strlcat(char *dest, char *src, size_t cat_len)
         }
         dest[j] = '\0';
     }
-    return (j + i);
+    return (j);
 }
-
 // I NEED TO ADD STRLEN FUNCTION TO REDUCE SIZE AND TEST THIS FUNCTION
