@@ -41,7 +41,7 @@ size_t  ft_strlcat(char *dest, char *src, size_t cat_len)
     }
     else
     {
-        while (src[i] && cat_len - 1 > (dest_len + i) - 1)
+        while (src[i] && (cat_len - (dest_len + i ) - 1 ) > 0 )
         {
             dest[j] = src[i];
             j++;
