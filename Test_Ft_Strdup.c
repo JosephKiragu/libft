@@ -14,7 +14,7 @@ char    *ft_strdup(const char *s1)
     len = 1;
     j = 0;
     while(s1[len])
-        {++len;}
+        {++len;} //USE STRLEN
 
     if(!s1)
         return (NULL);
