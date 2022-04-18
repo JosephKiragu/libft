@@ -14,35 +14,15 @@
 
 void    *ft_memset(void *s1, int c, size_t len)
 {
-    size_t j;
-    char *sPtr;
+    unsigned char *sPtr;
 
-    j = 0;
-    sPtr = (char *)s1;
+    sPtr = (unsigned char *)s1;
 
-    while (sPtr[j])
-        ++j;
-
-    if (len == 0)
-        return (s1);
-   /* else if (c == '\0')
+    while(len--)
     {
-        *sPtr = '\0'; //Use the char pointer to assign
-        return s1;
-    }*/ 
-    else if (len > j)
-    {
-        return (0);
+        *sPtr++ = c;
     }
-    else 
-    {
-        j = 0;
-        while (sPtr[j] && j < len)
-        {
-            sPtr[j] = c;
-            ++j;
-        }
-        return (s1);       
-    }   
+
+    return s1;
 
 }
