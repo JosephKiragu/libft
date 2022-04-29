@@ -6,27 +6,23 @@
 /*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:30:23 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/03/18 16:30:42 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/04/29 23:32:35 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    
-
-    if(!str)
-    {
-        return 0;
-    }
-
-    while (*(str + i))
-    {
-        i++;
-    }
-
-    return i;
+	i = 0;
+	if (!str)
+	{
+		return (0);
+	}
+	while (*(str + i))
+	{
+		i++;
+	}
+	return (i);
 }

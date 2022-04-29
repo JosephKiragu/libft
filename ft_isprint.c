@@ -6,12 +6,12 @@
 /*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:20:24 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/03/18 16:47:27 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/04/29 23:26:52 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return(c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }
