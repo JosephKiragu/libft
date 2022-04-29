@@ -3,21 +3,26 @@
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
     char *dest;
-    unsigned int i;
-    unsigned int stop;
+    size_t x;
+    size_t j;
 
-    i = start;
-    stop = start + len;
+    x = 0;
+    j = 0;
 
-    dest = (char *)malloc((len + 1) * sizeof(char));
+    dest = (char *)malloc((len + 1) * sizeof(*s));
+    if (!dest) 
+        return (NULL);
 
-
-    while (i < stop && *(s + i) != '\0' )
+    while (s[x])
     {
-        *dest = *(s + i);
-        i++;
-        dest++;
+        if (x >= start && j < len)
+        {
+            dest[j] = s[x];
+            j++;
+        }
+        x++;
     }
-    *dest = '\0';
-    return dest - len;  // returning the pointer to original position
+
+    dest[j] = 0;
+    return (dest);
 }
