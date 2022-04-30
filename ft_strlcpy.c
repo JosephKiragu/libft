@@ -9,35 +9,23 @@
 /*   Updated: 2022/03/18 16:29:06 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-size_t  ft_strlcpy(char *dst, const char *src, size_t cpy_len)
+size_t	ft_strlcpy(char *dst, const char *src, size_t cpy_len)
 {
-    
-    size_t srclen;
-    srclen = 0;
-    
+	size_t	srclen;
 
-
-    while (*(src + srclen))
-    {
-        srclen++;    
-
-    }
-
-    if (srclen + 1 <cpy_len) // +1 to include the terminating value
-    {
-        ft_memcpy(dst, src, srclen + 1);
-
-    }
-    else if (cpy_len != 0)
-    {
-        ft_memcpy(dst, src, cpy_len - 1); // minus one to not include the exact string
-        dst[cpy_len - 1] = '\0';
-    }
-
-    return srclen;
-    
-
+	srclen = 0;
+	while (*(src + srclen))
+	{
+		srclen++;
+	}
+	if (srclen + 1 < cpy_len)
+		ft_memcpy(dst, src, srclen + 1);
+	else if (cpy_len != 0)
+	{
+		ft_memcpy(dst, src, cpy_len - 1);
+		dst[cpy_len - 1] = '\0';
+	}
+	return (srclen);
 }
