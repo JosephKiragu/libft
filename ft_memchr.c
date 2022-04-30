@@ -9,26 +9,23 @@
 /*   Updated: 2022/03/18 16:47:13 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 #include "libft.h"
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t  j; //Because of comparison  to n
-    const char *sPtr;
+	const char	*sptr;
+	size_t		j;
 
-    j = 0;
-    sPtr = (const char *)s;// can only iterate over a char array not a void 
+	j = 0;
+	sptr = (const char *)s;
+	while (j < n)
+	{
+		if (sptr[j] == c)
+		{
+			return ((void *)s + j);
+		}
+		++j;
+	}
 
-    while (j < n)
-    {
-        if (sPtr[j] == c) // can only iterate over a char array not a void
-        {
-            return ((void *)s + j); // return from original pointer value and also since return value is void
-        }
-        ++j;
-    }
-    
-    return (0);
+	return (0);
 }

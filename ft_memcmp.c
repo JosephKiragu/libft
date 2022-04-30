@@ -9,30 +9,24 @@
 /*   Updated: 2022/03/18 16:13:44 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    unsigned const char *s1Ptr;
-    unsigned const char *s2Ptr;
+	unsigned const char	*s1ptr;
+	unsigned const char	*s2ptr;
+	size_t				j;
 
-    size_t j; 
-
-    j = 0;
-    s1Ptr = (unsigned const char *)s1;
-    s2Ptr = (unsigned const char *)s2;
-
-
-    while (j < n)
-    {
-        if (s1Ptr[j] != s2Ptr[j])
-        {
-            return s1Ptr[j] - s2Ptr[j];
-        }   
-        ++j;  
-    }
-
-    return(0);
+	j = 0;
+	s1ptr = (unsigned const char *)s1;
+	s2ptr = (unsigned const char *)s2;
+	while (j < n)
+	{
+		if (s1ptr[j] != s2ptr[j])
+		{
+			return (s1ptr[j] - s2ptr[j]);
+		}
+		++j;  
+	}
+	return (0);
 }
