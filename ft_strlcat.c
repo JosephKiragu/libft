@@ -22,16 +22,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t cat_len)
 	i = ft_strlen(src);
 	dest_len = j;
 	src_len = i;
-    i	= 0;
+	i = 0;
 	if (cat_len == 0)
 		return (src_len);
 	if (dest_len == cat_len)
 		return (dest_len + src_len);
-	while (src[i] && (cat_len - (dest_len + i ) - 1 ) > 0 )
+	while (src[i] && (cat_len - (dest_len + i) - 1) > 0)
 	{
-        dest[j] = src[i];
-        j++;
-        i++;
+		dest[j] = src[i];
+		j++;
+		i++;
 	}
 	dest[j] = '\0';
 	return (dest_len + src_len);
