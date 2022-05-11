@@ -34,4 +34,3 @@ char	*ft_strnstr(char *s1, char *s2, size_t len)
 	}
 	return (NULL);
 }
-
