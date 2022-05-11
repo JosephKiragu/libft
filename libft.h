@@ -6,7 +6,7 @@
 /*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 16:50:40 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/05/11 14:50:04 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/05/11 17:20:05 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-
 
 typedef struct s_split_next
 {

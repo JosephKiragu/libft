@@ -6,7 +6,7 @@
 /*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:46:53 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/05/11 14:46:58 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/05/11 17:11:22 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -54,7 +54,6 @@ static void	*ft_split_range(char **split, char const *s, \
 	lt->length++;
 	return (split);
 }
-
 
 static void	*ft_split_by_char(char **split, char const *s, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: jkiragu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 20:59:13 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/05/11 14:46:36 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/05/11 17:12:37 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,7 +24,6 @@ static int	ft_char_in_set(char c, char const *set)
 	}
 	return (0);
 }
-
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
