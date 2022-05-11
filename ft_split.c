@@ -88,6 +88,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**split;
 
+	if (!s)
+		return (NULL);
 	split = ft_alloc_split(s, c);
 	if (!split)
 		return (NULL);
