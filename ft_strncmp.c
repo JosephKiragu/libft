@@ -20,9 +20,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	sptr1 = (char *)s1;
 	sptr2 = (char *)s2;
-
 	j = 0;
-
 	while (j < n)
 	{
 		if (sptr1[j] != sptr2[j])
