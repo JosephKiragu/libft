@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	t_abs(int num)
+static int	ft_abs(int num)
 {
 	if (num < 0)
 		return (-num);
