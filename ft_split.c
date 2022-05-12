@@ -93,4 +93,3 @@ char	**ft_split(char const *s, char c)
 	ft_split_words(s, c, final_str, num_words);
 	return (final_str);
 }
-
