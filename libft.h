@@ -17,12 +17,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct s_split_next
-{
-	size_t	start;
-	size_t	length;
-}				t_split_next;
-
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s1, size_t n);
 void			*ft_calloc(size_t count, size_t size);
