@@ -25,7 +25,7 @@ static char	**ft_alloc_split(char const *s, char c)
 			total++;
 		i++;
 	}
-	split = (char **)malloc(sizeof(s) * (total + 2));
+	split = (char **)malloc(sizeof(char) * (total + 2));
 	if (!split)
 		return (NULL);
 	return (split);
