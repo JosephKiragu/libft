@@ -21,7 +21,6 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t maxlen)
 	while (*dst++ && dstlen < maxlen)
 		dstlen++;
 	dst = (dst - dstlen - 1);
-
 	if (dstlen == maxlen)
 		return (maxlen + srclen);
 	if (srclen < maxlen - dstlen)
