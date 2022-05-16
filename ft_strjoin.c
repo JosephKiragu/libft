@@ -13,19 +13,26 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	len ;
-	char	*dest;
+	char	*str;
+	size_t	i;
+	size_t	j;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
-	dest = (char *)malloc((len + 1) * sizeof(char));
-	while (*(s1))
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[i])
 	{
-		*dest++ = *s1++;
+		str[j++] = s1[i];
+		i++;
 	}
-	while (*s2)
+	i = 0;
+	while (s2[i])
 	{
-		*dest++ = *s2++;
+		str[j++] = s2[i];
+		i++;
 	}
-	*dest = '\0';
-	return (dest - len);
+	str[j] = 0;
+	return (str);
 }
